@@ -1,0 +1,194 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.4in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \vspace{2pt}\textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeEntry}[1]{
+    \item\small{
+        \vspace{-2pt}{#1}\vspace{0pt}
+    }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+
+%----------Experience-----------------
+
+\newcommand{\organization}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2\\
+    \end{tabular*}
+}
+
+\newcommand{\position}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-14pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-2pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=1pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-4pt}\begin{itemize}[itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Shengran (Kevin) Jin} &
+  kevinjin0420@gmail.com\\
+  \href{https://www.linkedin.com/in/kevinjin0420}{linkedin.com/in/kevinjin0420} $\cdot$ 
+  \href{https://github.com/kevinjin420}{github.com/kevinjin420} $\cdot$ 
+  \href{https://kevinjin420.github.io}{kevinjin420.github.io}&
+  +1-240-756-8098 \\
+\end{tabular*}
+
+\vspace{-1mm}
+
+%-----------EDUCATION-----------------
+\section{Education}
+    \resumeSubheading
+      {University of Michigan, Ann Arbor}{Ann Arbor, MI}
+      {B.S.E. in Computer Engineering; GPA: 3.96 / 4.0}{Sep 2024 -- Present}
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Programming Languages}
+        {Python, Java, C++, C, JavaScript, Typescript, Kotlin, LUA, R, SQL}
+    \resumeSubItem{Frameworks and Libraries}
+        {Vue.js, React.js, Next.js, Express.js, Astro.js, Bootstrap, Tailwind CSS, ROS2, Django, REST, Spring Boot, Ansible, SQLite, MySQL, PostgreSQL, SQLAlchemy, ConnectRPC, Protobuf, MessagePack, Flask, FastAPI, Pandas, NumPy, Matplotlib, OpenAI SDK}
+    \resumeSubItem{Tools and Platforms}      
+        {Git, Linux, Shell, \LaTeX, VSCode, IntelliJ IDEA, Postman, Docker, Vite, AWS, Google Cloud, GitHub CI/CD}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+    \organization{TikTok}{San Jose, California}
+    \position{Backend Software Engineer Intern}{May 2026 - July 2026}
+        \resumeItemListStart
+        \resumeEntry{Incoming}
+        \resumeItemListEnd
+
+        
+    \organization{Jaseci Labs}{Ann Arbor, Michigan}
+    \position{Developer Advocate}{Oct. 2025 -- Present}
+        \resumeItemListStart
+        \resumeEntry{Built documentation benchmarking platform (React/Flask/PostgreSQL) with OpenRouter integration, achieving $<$0.025 coefficient of variance on 120+ automated test cases with multiple models and jaclang compiler validations}
+        \resumeEntry{Designed LLM-enabled MapReduce pipeline with concurrent processing to compress 1.2MB documentation into 10KB machine-readable format, achieving 93\% size reduction while maintaining critical information}
+        \resumeItemListEnd
+    
+    \organization{Michigan Mars Rover Student Project Team}{University of Michigan, Ann Arbor}
+    \position{Teleoperations Lead}{July 2025 -- Present}
+        \resumeItemListStart
+        \resumeEntry{Redesigned rover teleoperation backend from Django to FastAPI with 6 async WebSocket endpoints and REST API, integrating ROS2 pub/sub messaging for bidirectional real-time control at 60Hz}  \resumeEntry{Implemented MessagePack binary serialization across Vue.js frontend and Python backend, reducing network latency by 44\% and bandwidth by 36\% for autonomous vehicle command/telemetry transmission}
+        \resumeEntry{Built THREE.js-based 3D rover visualization tool rendering URDF models for real-time inverse kinematics target positioning and teleoperation spatial awareness}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+  
+    \resumeSubItem{SpotifyExplorer}{React application to download, manage, and create Spotify playlists}
+    \resumeItemListStart      
+        \resumeEntry{Built frontend with React and Tailwind CSS; backend REST API with Django and Django REST Framework}
+        \resumeEntry{Integrated Spotify OAuth2 authentication and yt-dlp for music downloads and playlist management}
+        \resumeEntry{Implemented MySQL caching layer for optimized query performance}
+    \resumeItemListEnd
+  
+    \resumeSubItem{TwitchPlus}{Twitch Media Recommendation Application}
+    \resumeItemListStart      
+        \resumeEntry{Built React frontend with Ant Design and Spring Boot REST API with Spring Security authentication}
+        \resumeEntry{Deployed on AWS (RDS for MySQL, App Runner for application) with Caffeine caching layer}
+        \resumeEntry{Implemented content-based recommendation engine for personalized streaming suggestions}
+    \resumeItemListEnd
+
+    \resumeItem{MiniPlayer}{Kotlin Android app for music management and playback}
+    \resumeItemListStart
+        \resumeEntry{Developed a Kotlin music application using Android Jetpack Library and Hilt DI}
+        \resumeEntry{Built mock REST API server using Ktor and Retrofit client}
+        \resumeEntry{Designed feed, album, and favorite UI in Jetpack Compose following MVVM architecture}
+        \resumeEntry{Incorporated Google Exoplayer for music playback}
+    \resumeItemListEnd
+
+    \resumeSubItem{PDF-GPT}{Full stack Q\&A AI Agent for PDF Document Queries}
+    \resumeItemListStart      
+        \resumeEntry{Built full-stack application with React frontend and Express.js REST API backend}
+        \resumeEntry{Integrated OpenAI GPT-4o via LangChain to enable document parsing, vector storage, and conversational queries}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+
+
+\end{document}
