@@ -1,0 +1,19 @@
+{
+    "terminal.integrated.env.osx": {
+        "PATH": "/Library/TeX/texbin:${env:PATH}"
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "/Library/TeX/texbin/latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-pdflatex=/Library/TeX/texbin/pdflatex",
+                "%DOC%"
+            ]
+        }
+    ]
+}
