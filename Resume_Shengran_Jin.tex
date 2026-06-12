@@ -135,8 +135,8 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built a periodic batch-to-stream data pipeline (Hive, Apache Flink, Kafka) to refresh stale TikTok Search query features, keeping ML training datasets current when search terms go dormant}
-        \resumeEntry{Extended Flink streaming jobs to add query token ID fields to Kafka feature payloads consumed by downstream search ranking models}
+        \resumeEntry{Built an offline AI Research V2 batch pipeline (Hive, Apache Flink, Kafka, Go) that routes search queries into \texttt{llm\_task\_master} and triggers cached creator outline generation through \texttt{inspiration\_llm}}
+        \resumeEntry{Implemented query context assembly with LLM term expansion, Elasticsearch video recall, Abase video-understanding reads, music/video fallbacks, and isolated Kafka test topics before production rollout}
         \resumeItemListEnd
 
         

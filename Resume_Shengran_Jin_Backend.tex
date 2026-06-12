@@ -135,8 +135,8 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built end-to-end batch-to-stream pipeline (Hive, Apache Flink, Kafka) to periodically refresh stale search query features, wiring change-triggered dispatch and a new Flink joiner with validation and metrics to keep model training data current for dormant queries}
-        \resumeEntry{Authored Flink job configs and unit tests, validating new pipeline paths against isolated Kafka test sinks before production rollout}
+        \resumeEntry{Built production Go scenario \texttt{query\_ai\_outline\_v2} in \texttt{llm\_task\_master}, routing Kafka task messages into offline request construction and \texttt{inspiration\_llm.GenAiOutlineOffline} RPC for Abase-backed outline generation}
+        \resumeEntry{Implemented resilient context retrieval with Fornax term expansion, Elasticsearch video recall, Abase MGETs for highlight/video-understanding data, ecology-platform music/video fallbacks, rate-limited RPC clients, and isolated Flink/Kafka load tests}
         \resumeItemListEnd
 
         
