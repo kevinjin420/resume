@@ -135,10 +135,10 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built full-query BFS feature refresh pipeline across Hive, Flink, Kafka, and Tbase, adding a scheduled batch-to-stream trigger path for dormant search queries whose features would otherwise go stale}
-        \resumeEntry{Extended Tbase dispatch and joiner DAGs with a dedicated refresh rail, ValueChangeTrigger-backed Kafka topic, high-parallelism feature joiner, field parsing/defaulting, and isolated test sinks before production rollout}
-        \resumeEntry{Propagated GenRec \texttt{token\_ids} through BFS-bound query and user feature streams by updating feature defaults and dynamic Tbase field configs while preserving existing Abase/ES storage contracts}
-        \resumeEntry{Built Go scenario \texttt{query\_ai\_outline\_v2} in \texttt{llm\_task\_master}, assembling offline AI Research context via Fornax term expansion, Elasticsearch recall, Abase reads, rate-limited RPCs, and \texttt{inspiration\_llm} outline generation}
+        \resumeEntry{Built full-query feature refresh pipeline across Hive, Flink, Kafka, and Tbase, adding a scheduled batch-to-stream path for dormant search queries whose downstream features would otherwise go stale}
+        \resumeEntry{Extended streaming dispatch and joiner DAGs with a dedicated refresh rail, change-triggered Kafka flow, high-parallelism feature joins, field parsing, defaulting, and isolated test sinks before production rollout}
+        \resumeEntry{Propagated model token identifiers through query and user feature streams by updating feature defaults and dynamic Tbase field configs while preserving existing distributed cache and search-index storage contracts}
+        \resumeEntry{Built production Go backend path for offline AI-assisted search analysis, assembling retrieval context with LLM term expansion, Elasticsearch recall, distributed cache reads, rate-limited RPCs, and fallback data sources}
         \resumeItemListEnd
 
         
