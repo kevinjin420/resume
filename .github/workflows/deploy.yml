@@ -26,13 +26,16 @@ jobs:
           root_file: |
             Resume_Shengran_Jin.tex
             Resume_Shengran_Jin_Backend.tex
+            Resume_Shengran_Jin_Systems.tex
           args: -pdf -interaction=nonstopmode -file-line-error
 
       - name: Assemble site
         run: |
           mkdir -p _site/backend
+          mkdir -p _site/systems
           cp Resume_Shengran_Jin.pdf _site/resume.pdf
           cp Resume_Shengran_Jin_Backend.pdf _site/backend/resume.pdf
+          cp Resume_Shengran_Jin_Systems.pdf _site/systems/resume.pdf
           echo "resume.kevinjin.dev" > _site/CNAME
 
       - uses: actions/upload-pages-artifact@v3

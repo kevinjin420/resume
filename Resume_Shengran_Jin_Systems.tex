@@ -1,0 +1,182 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.4in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \vspace{2pt}\textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeEntry}[1]{
+    \item\small{
+        \vspace{-2pt}{#1}\vspace{0pt}
+    }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+
+%----------Experience-----------------
+
+\newcommand{\organization}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2\\
+    \end{tabular*}
+}
+
+\newcommand{\position}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-14pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-2pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=1pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-4pt}\begin{itemize}[itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Shengran (Kevin) Jin} &
+  kevinjin0420@gmail.com\\
+  \href{https://www.linkedin.com/in/kevinjin0420}{linkedin.com/in/kevinjin0420} $\cdot$ 
+  \href{https://github.com/kevinjin420}{github.com/kevinjin420} $\cdot$ 
+  \href{https://kevinjin.dev}{kevinjin.dev}&
+  +1-240-756-8098 \\
+\end{tabular*}
+
+\vspace{-1mm}
+
+%-----------EDUCATION-----------------
+\section{Education}
+    \resumeSubheading
+      {University of Michigan, Ann Arbor}{Ann Arbor, MI}
+      {B.S.E. in Computer Engineering; GPA: 3.9 / 4.0}{Sep 2024 -- Present}
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Programming Languages}
+        {Go, Python, C++, C, Java, SQL, TypeScript, Kotlin}
+    \resumeSubItem{Systems and Data Infrastructure}
+        {Kafka, Flink, Hive, Tbase, Abase, Elasticsearch, RPC, Protobuf, MessagePack, ROS2, WebSockets, PostgreSQL, MySQL, SQLite}
+    \resumeSubItem{Tools and Platforms}
+        {Linux, Docker, Git, GitHub Actions, AWS, Google Cloud, Shell, Ansible, \LaTeX, VSCode, IntelliJ IDEA}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+    \organization{TikTok}{San Jose, California}
+    \position{Backend Software Engineer Intern}{May 2026 -- Present}
+        \resumeItemListStart
+        \resumeEntry{Built full-query BFS feature refresh pipeline across Hive, Flink, Kafka, and Tbase, adding a scheduled batch-to-stream trigger path for dormant search queries whose features would otherwise go stale}
+        \resumeEntry{Extended Tbase dispatch and joiner DAGs with a dedicated refresh rail, ValueChangeTrigger-backed Kafka topic, high-parallelism feature joiner, field parsing/defaulting, and isolated test sinks before production rollout}
+        \resumeEntry{Propagated GenRec \texttt{token\_ids} through BFS-bound query and user feature streams by updating feature defaults and dynamic Tbase field configs while preserving existing Abase/ES storage contracts}
+        \resumeEntry{Built Go scenario \texttt{query\_ai\_outline\_v2} in \texttt{llm\_task\_master}, assembling offline AI Research context via Fornax term expansion, Elasticsearch recall, Abase reads, rate-limited RPCs, and \texttt{inspiration\_llm} outline generation}
+        \resumeItemListEnd
+
+        
+    \organization{Jaseci Labs}{Ann Arbor, Michigan}
+    \position{Developer Advocate}{Oct. 2025 -- Present}
+        \resumeItemListStart
+        \resumeEntry{Built documentation benchmarking platform (React/Flask/PostgreSQL) with OpenRouter integration, achieving $<$0.025 coefficient of variance on 120+ automated test cases with multiple models and jaclang compiler validations}
+        \resumeEntry{Designed LLM-enabled MapReduce pipeline with concurrent processing to compress 1.2MB documentation into 10KB machine-readable format, achieving 93\% size reduction while maintaining critical information}
+        \resumeItemListEnd
+    
+    \organization{Michigan Mars Rover Student Project Team}{University of Michigan, Ann Arbor}
+    \position{Teleoperations Lead}{July 2025 -- Present}
+        \resumeItemListStart
+        \resumeEntry{Re-architected rover teleoperation backend from Django to FastAPI, building 7 MessagePack WebSocket channels and REST endpoints that bridge ROS2 publishers, subscribers, and services for real-time command and telemetry flow}
+        \resumeEntry{Hardened backend infrastructure with a background ROS2 executor, cached service clients, async service wrappers, payload throttling and size guards, structured logging, and SQLite-backed waypoint/recording persistence}
+        \resumeEntry{Built automated mock/test tooling with mock ROS nodes, API tests, and browser-based integration coverage to exercise command, telemetry, and operator workflows}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+  
+    \resumeSubItem{TwitchPlus}{Twitch media recommendation backend and deployment}
+    \resumeItemListStart      
+        \resumeEntry{Built Spring Boot REST API with Spring Security authentication, MySQL persistence, and Caffeine caching for low-latency recommendation lookups}
+        \resumeEntry{Deployed on AWS using RDS for MySQL and App Runner, implementing content-based recommendation flow for personalized streaming suggestions}
+    \resumeItemListEnd
+
+    \resumeSubItem{SpotifyExplorer}{Music download and playlist management service}
+    \resumeItemListStart      
+        \resumeEntry{Built Django REST backend with Spotify OAuth2 integration, yt-dlp orchestration, and MySQL caching for playlist and download metadata}
+        \resumeEntry{Designed API surface consumed by a React frontend for playlist creation, music download management, and cached search results}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+
+
+\end{document}
