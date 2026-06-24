@@ -122,7 +122,7 @@
     \resumeSubItem{Programming Languages}
         {Go, Python, C++, C, Java, SQL, TypeScript, Kotlin}
     \resumeSubItem{Systems and Data Infrastructure}
-        {Kafka, Flink, Hive, Tbase, Abase, Elasticsearch, RPC, Protobuf, MessagePack, ROS2, WebSockets, PostgreSQL, MySQL, SQLite}
+        {Kafka, Flink, Hive, Distributed Caches, Elasticsearch, RPC, Thrift, Protobuf, MessagePack, ROS2, WebSockets, PostgreSQL, MySQL, SQLite}
     \resumeSubItem{Tools and Platforms}
         {Linux, Docker, Git, GitHub Actions, AWS, Google Cloud, Shell, Ansible, \LaTeX, VSCode, IntelliJ IDEA}
   \resumeSubHeadingListEnd
@@ -135,10 +135,10 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built full-query feature refresh pipeline across Hive, Flink, Kafka, and Tbase, adding a scheduled batch-to-stream path for dormant search queries whose downstream features would otherwise go stale}
+        \resumeEntry{Built full-query feature refresh pipeline across Hive, Flink, Kafka, and distributed storage, adding a scheduled batch-to-stream path for dormant search queries whose downstream features would otherwise go stale}
         \resumeEntry{Extended streaming dispatch and joiner DAGs with a dedicated refresh rail, change-triggered Kafka flow, high-parallelism feature joins, field parsing, defaulting, and isolated test sinks before production rollout}
-        \resumeEntry{Propagated model token identifiers through query and user feature streams by updating feature defaults and dynamic Tbase field configs while preserving existing distributed cache and search-index storage contracts}
-        \resumeEntry{Built production Go backend path for offline AI-assisted search analysis, assembling retrieval context with LLM term expansion, Elasticsearch recall, distributed cache reads, rate-limited RPCs, and fallback data sources}
+        \resumeEntry{Propagated model token identifiers through query and user feature streams by updating feature defaults and dynamic storage configs while preserving existing distributed cache and search-index storage contracts}
+        \resumeEntry{Built Go/Thrift RPC layer for AI-assisted creator analysis with multimodal video analysis, distributed caching, server-side validation, and randomized latency benchmarking across 27 RPCs}
         \resumeItemListEnd
 
         
