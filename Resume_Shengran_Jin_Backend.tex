@@ -121,7 +121,7 @@
   \resumeSubHeadingListStart
     \resumeSubItem{Programming Languages}
         {Python, C++, C, TypeScript, Java, Go, SQL, Kotlin}
-    \resumeSubItem{Backend and Systems}
+    \resumeSubItem{Frameworks and Technologies}
         {FastAPI, Flask, ROS2, WebSockets, Kafka, Flink, Hive, Elasticsearch, RPC, Thrift, MessagePack, Protobuf, SQLAlchemy, PostgreSQL, MySQL, SQLite, Docker, Linux, Ansible}
     \resumeSubItem{Tools and Platforms}
         {Git, GitHub Actions, AWS, Google Cloud, Shell, \LaTeX, VSCode, IntelliJ IDEA, Postman}
@@ -135,8 +135,11 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built production Go/Thrift RPC surface for AI-assisted creator analysis, converting Python workflows into backend handlers for video analysis, creator profiling, search, ASR/OCR, comments, and image generation}
-        \resumeEntry{Implemented direct-video analysis, frame/metadata multimodal fallback, distributed caching, request validation, sanitized upstream errors, and randomized benchmark runner covering 27 RPCs over 540 runs}
+        \resumeEntry{Built Go/Thrift services for multimodal creator analysis, ranked search, ASR/OCR, profiles, comments, and image generation, replacing local Python workflows with scalable backend RPCs}
+        \resumeEntry{Integrated asynchronous text/image-to-video generation with configurable media inputs, persisted task state, polling, terminal failure handling, and validated 10-second 720p output}
+        \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing 170 million query-feature records per run and propagating model token identifiers across query and user streams through change-triggered joins}
+        \resumeEntry{Designed an offline LLM pipeline emitting 80,000--120,000 deduplicated candidates daily after 90-day success suppression; added fail-open metrics for throughput, failure taxonomy, latency, and retries and defined recovery for 10+ million anomalous records}
+        \resumeEntry{Built fail-open observability for the offline pipeline with tagged per-record metrics covering throughput, failure taxonomy, latency, retry exhaustion, and malformed inputs}
         \resumeItemListEnd
 
         
@@ -161,23 +164,13 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-  
-    \resumeSubItem{SpotifyExplorer}{React application to download, manage, and create Spotify playlists}
-    \resumeItemListStart      
-        \resumeEntry{Built frontend with React and Tailwind CSS; backend REST API with Django and Django REST Framework}
-        \resumeEntry{Integrated Spotify OAuth2 authentication and yt-dlp for music downloads and playlist management}
-        \resumeEntry{Implemented MySQL caching layer for optimized query performance}
+
+    \resumeSubItem{TwitchPlus}{Twitch media recommendation backend and deployment}
+    \resumeItemListStart
+        \resumeEntry{Built a Spring Boot REST API with Spring Security authentication, MySQL persistence, and Caffeine caching for low-latency recommendation lookups}
+        \resumeEntry{Deployed on AWS using RDS for MySQL and App Runner, implementing content-based recommendations for personalized streaming suggestions}
     \resumeItemListEnd
-  
-    \resumeSubItem{TwitchPlus}{Twitch Media Recommendation Application}
-    \resumeItemListStart      
-        \resumeEntry{Built React frontend with Ant Design and Spring Boot REST API with Spring Security authentication}
-        \resumeEntry{Deployed on AWS (RDS for MySQL, App Runner for application) with Caffeine caching layer}
-        \resumeEntry{Implemented content-based recommendation engine for personalized streaming suggestions}
-    \resumeItemListEnd
-    
+
   \resumeSubHeadingListEnd
-
-
 
 \end{document}

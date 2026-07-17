@@ -135,8 +135,10 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built Go/Thrift RPC surface for AI-assisted creator analysis, porting Python workflows into scalable handlers for video analysis, creator profiling, search, ASR/OCR, comments, and image generation}
-        \resumeEntry{Integrated direct-video and frame-based multimodal analysis, distributed caching, server-side validation, and randomized latency benchmarking across 27 RPCs and 540 test runs}
+        \resumeEntry{Built Go/Thrift services for multimodal creator analysis with concurrent media retrieval, replacing local Python workflows with scalable backend RPCs}
+        \resumeEntry{Integrated asynchronous text/image-to-video generation with configurable media inputs, persisted task state, polling, terminal failure handling, and validated 10-second 720p output}
+        \resumeEntry{Designed an offline LLM pipeline emitting 80,000--120,000 deduplicated candidates daily after 90-day success suppression; added fail-open metrics for throughput, failure taxonomy, latency, and retries and defined recovery for 10+ million anomalous records}
+        \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing 170 million query-feature records per run and propagating model token identifiers across query and user streams through change-triggered joins}
         \resumeItemListEnd
 
         
@@ -161,25 +163,12 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-  
-    \resumeSubItem{SpotifyExplorer}{React application to download, manage, and create Spotify playlists}
-    \resumeItemListStart      
-        \resumeEntry{Built frontend with React and Tailwind CSS; backend REST API with Django and Django REST Framework}
-        \resumeEntry{Integrated Spotify OAuth2 authentication and yt-dlp for music downloads and playlist management}
-        \resumeEntry{Implemented MySQL caching layer for optimized query performance}
-    \resumeItemListEnd
-  
+
     \resumeSubItem{TwitchPlus}{Twitch Media Recommendation Application}
     \resumeItemListStart      
         \resumeEntry{Built React frontend with Ant Design and Spring Boot REST API with Spring Security authentication}
         \resumeEntry{Deployed on AWS (RDS for MySQL, App Runner for application) with Caffeine caching layer}
         \resumeEntry{Implemented content-based recommendation engine for personalized streaming suggestions}
-    \resumeItemListEnd
-
-    \resumeSubItem{PDF-GPT}{Full stack Q\&A AI Agent for PDF Document Queries}
-    \resumeItemListStart      
-        \resumeEntry{Built full-stack application with React frontend and Express.js REST API backend}
-        \resumeEntry{Integrated OpenAI GPT-4o via LangChain to enable document parsing, vector storage, and conversational queries}
     \resumeItemListEnd
     
   \resumeSubHeadingListEnd
