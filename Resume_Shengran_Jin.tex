@@ -122,11 +122,11 @@
 \section{Technical Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Programming Languages}
-        {Python, Java, Go, C++, C, TypeScript, JavaScript, Kotlin, Lua, SQL}
+        {Python, C++, C, TypeScript, Java, Go, SQL, Kotlin}
     \resumeSubItem{Frameworks and Technologies}
-        {React, Vue, FastAPI, Flask, Django, Spring Boot, ROS2, WebSockets, Kafka, Flink, Hive, Elasticsearch, SQLAlchemy, PostgreSQL, MySQL, SQLite, MessagePack, Protobuf}
+        {FastAPI, Flask, ROS2, WebSockets, Kafka, Flink, Hive, Elasticsearch, RPC, Thrift, MessagePack, Protobuf, SQLAlchemy, PostgreSQL, MySQL, SQLite, Docker, Linux, Ansible}
     \resumeSubItem{Tools and Platforms}
-        {Linux, Git, Docker, AWS, Google Cloud, Ansible, GitHub Actions, Shell, \LaTeX, VSCode, IntelliJ IDEA, Postman}
+        {Git, GitHub Actions, AWS, Google Cloud, Shell, \LaTeX, VSCode, IntelliJ IDEA, Postman}
   \resumeSubHeadingListEnd
 
 
@@ -137,10 +137,10 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- Present}
         \resumeItemListStart
-        \resumeEntry{Built Go/Thrift services for multimodal creator analysis with concurrent media retrieval, replacing local Python workflows with scalable backend RPCs}
+        \resumeEntry{Built Go/Thrift services for multimodal creator analysis, ranked search, ASR/OCR, profiles, comments, and image generation, replacing local Python workflows with scalable backend RPCs}
         \resumeEntry{Integrated asynchronous text/image-to-video generation with configurable media inputs, persisted task state, polling, terminal failure handling, and validated 10-second 720p output}
-        \resumeEntry{Designed an offline LLM pipeline emitting 80,000--120,000 deduplicated candidates daily after 90-day success suppression; added fail-open metrics for throughput, failure taxonomy, latency, and retries and defined recovery for 10+ million anomalous records}
         \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing 170 million query-feature records per run and propagating model token identifiers across query and user streams through change-triggered joins}
+        \resumeEntry{Designed an offline LLM pipeline emitting 80,000--120,000 deduplicated candidates daily after 90-day success suppression; built fail-open observability with tagged per-record metrics for throughput, failure taxonomy, latency, and retry exhaustion, and defined recovery for 10+ million anomalous records}
         \resumeItemListEnd
 
         
@@ -154,10 +154,10 @@
     \organization{Michigan Mars Rover Student Project Team}{University of Michigan, Ann Arbor}
     \position{Teleoperations Lead}{July 2025 -- Present}
         \resumeItemListStart
-        \resumeEntry{Redesigned rover teleoperation stack from Django to FastAPI, shipping domain-specific WebSocket and REST interfaces that bridge ROS2 messaging for real-time operator control and telemetry}
-        \resumeEntry{Implemented MessagePack transport between Vue.js frontend and Python backend for low-overhead teleoperation command and telemetry exchange}
-        \resumeEntry{Built automated mock/test tooling to validate teleoperation flows across API and browser layers before field deployment}
-        \resumeEntry{Built THREE.js-based 3D rover visualization with URDF rendering and inverse-kinematics target feedback to improve operator spatial awareness during teleoperation}
+        \resumeEntry{Re-architected rover teleoperation backend from Django to FastAPI, building 7 MessagePack WebSocket channels and REST endpoints that bridge ROS2 publishers, subscribers, and services for real-time command and telemetry flow}
+        \resumeEntry{Hardened backend infrastructure with a background ROS2 executor, cached service clients, async service wrappers, payload throttling and size guards, structured logging, and SQLite-backed waypoint/recording persistence}
+        \resumeEntry{Built automated mock/test tooling with mock ROS nodes, API tests, and browser-based integration coverage to exercise command, telemetry, and operator workflows}
+        \resumeEntry{Maintained telemetry-facing operator surfaces including URDF-based 3D rover state visualization for situational awareness during teleoperation}
         \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -166,15 +166,13 @@
 \section{Projects}
   \resumeSubHeadingListStart
 
-    \resumeSubItem{TwitchPlus}{Twitch Media Recommendation Application}
-    \resumeItemListStart      
-        \resumeEntry{Built React frontend with Ant Design and Spring Boot REST API with Spring Security authentication}
-        \resumeEntry{Deployed on AWS (RDS for MySQL, App Runner for application) with Caffeine caching layer}
-        \resumeEntry{Implemented content-based recommendation engine for personalized streaming suggestions}
+    \resumeSubItem{TwitchPlus}{Twitch media recommendation backend and deployment}
+    \resumeItemListStart
+        \resumeEntry{Built a Spring Boot REST API with Spring Security authentication, MySQL persistence, and Caffeine caching for low-latency recommendation lookups}
+        \resumeEntry{Deployed on AWS using RDS for MySQL and App Runner, implementing content-based recommendations for personalized streaming suggestions}
     \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
 
 \vspace*{\fill}
 
