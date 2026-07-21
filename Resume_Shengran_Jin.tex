@@ -158,7 +158,7 @@
         \resumeEntry{Re-architected rover teleoperation backend from Django to FastAPI with 7 WebSocket channels and REST endpoints bridging ROS2 publishers, subscribers, and services, cutting round-trip latency 40\% by switching the serialization protocol to MessagePack}
         \resumeEntry{Hardened backend infrastructure with a background ROS2 executor, cached service clients, async service wrappers, payload throttling and size guards, structured logging, and SQLite-backed waypoint/recording persistence}
         \resumeEntry{Built automated mock/test tooling with mock ROS nodes, API tests, and browser-based integration coverage to exercise command, telemetry, and operator workflows}
-        \resumeEntry{Maintained telemetry-facing operator surfaces including URDF-based 3D rover state visualization for situational awareness during teleoperation}
+        \resumeEntry{Optimized a URDF/Three.js 3D rover visualization by replacing a full scene-graph traversal and linear joint lookup on every telemetry update with a precomputed hash map, cutting render cores from roughly 100\% to 40\% utilization and reducing thermal throttling under sustained field load}
         \resumeItemListEnd
 
 \resumeSubHeadingListEnd
