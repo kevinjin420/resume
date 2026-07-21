@@ -124,7 +124,7 @@
     \resumeSubItem{Programming Languages}
         {Go, Python, C++, C, Java, SQL, TypeScript, Kotlin}
     \resumeSubItem{Frameworks and Technologies}
-        {Kafka, Flink, Hive, Distributed Caches, Elasticsearch, RPC, Thrift, Protobuf, MessagePack, ROS2, WebSockets, PostgreSQL, MySQL, SQLite}
+        {Kafka, Flink, Hive, Redis, Distributed Caches, Elasticsearch, RPC, Thrift, Kitex, Protobuf, MessagePack, ROS2, WebSockets, PostgreSQL, MySQL, SQLite}
     \resumeSubItem{Tools and Platforms}
         {Linux, Docker, Git, GitHub Actions, AWS, Google Cloud, Shell, Ansible, \LaTeX, VSCode, IntelliJ IDEA}
   \resumeSubHeadingListEnd
@@ -138,9 +138,10 @@
     \position{Backend Software Engineer Intern}{May 2026 -- July 2026}
         \resumeItemListStart
         \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing 170 million query-feature records per run and propagating model token identifiers across query and user streams through change-triggered joins}
-        \resumeEntry{Designed an offline LLM pipeline emitting 80,000--120,000 deduplicated candidates daily after 90-day success suppression; added fail-open metrics for throughput, failure taxonomy, latency, and retries and defined recovery for 10+ million anomalous records}
+        \resumeEntry{Designed an offline LLM pipeline with a Flink SQL enqueue stage unioning three ranked traffic sources with priority dedup and per-source quotas, emitting 80,000--120,000 candidates daily after 90-day success suppression; added fail-open metrics for throughput, latency, and retries plus stage-tagged errors propagated across RPC into the ODS sink, and defined recovery for 10+ million anomalous records}
         \resumeEntry{Built Go/Thrift multimodal analysis services with concurrent media retrieval, replacing local Python workflows with scalable backend RPCs}
         \resumeEntry{Integrated asynchronous text/image-to-video generation with configurable media inputs, persisted task state, polling, terminal failure handling, and validated 10-second 720p output}
+        \resumeEntry{Built a platform-wide feedback and reporting service with a single feature-agnostic Go/Thrift RPC endpoint backed by region-local MySQL, a scheduled MySQL-to-Hive sync, and a JSON-exploding view powering per-question analytics dashboards}
         \resumeItemListEnd
 
         
