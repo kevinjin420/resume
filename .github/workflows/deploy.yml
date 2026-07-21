@@ -20,13 +20,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v4
+      - uses: awalsh128/cache-apt-pkgs-action@v1
         with:
-          root_file: |
-            Resume_Shengran_Jin.tex
-            Resume_Shengran_Jin_Systems.tex
-          args: -pdf -interaction=nonstopmode -file-line-error
+          packages: latexmk texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+          version: 1.0
+          execute_install_scripts: true
+
+      - name: Compile LaTeX
+        run: latexmk -pdf -interaction=nonstopmode -file-line-error Resume_Shengran_Jin.tex Resume_Shengran_Jin_Systems.tex
 
       - name: Assemble site
         run: |
