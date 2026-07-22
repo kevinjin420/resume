@@ -139,7 +139,7 @@
         \resumeItemListStart
         \resumeEntry{Built Go/Thrift services for multimodal creator analysis, ranked search, ASR/OCR, profiles, comments, and image generation, replacing local Python workflows with scalable backend RPCs}
         \resumeEntry{Integrated asynchronous text/image-to-video generation with configurable media inputs, persisted task state, polling, terminal failure handling, and validated 10-second 720p output}
-        \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing 170 million query-feature records per run and propagating model token identifiers across query and user streams through change-triggered joins}
+        \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing over 200 million query-feature records per run and propagating model token identifiers across query and user streams through change-data-capture (CDC) triggers}
         \resumeEntry{Designed an offline LLM pipeline with a Flink SQL enqueue stage unioning three ranked traffic sources with priority dedup and per-source quotas, emitting 80,000--120,000 candidates daily after 90-day success suppression; built fail-open observability with per-record metrics for throughput, latency, and retry exhaustion plus stage-tagged errors propagated across RPC into the ODS sink, and defined recovery for 10+ million anomalous records}
         \resumeEntry{Built a platform-wide feedback and reporting service with a single feature-agnostic Go/Thrift RPC endpoint backed by region-local MySQL, a scheduled MySQL-to-Hive sync, and a JSON-exploding view powering per-question analytics dashboards}
         \resumeItemListEnd
