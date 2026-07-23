@@ -137,11 +137,11 @@
     \organization{TikTok}{San Jose, California}
     \position{Backend Software Engineer Intern}{May 2026 -- July 2026}
         \resumeItemListStart
-        \resumeEntry{Engineered Flink/Hive/Kafka pipelines refreshing over 200 million query-feature records per run and propagating model token identifiers across query and user streams through change-data-capture (CDC) triggers}
-        \resumeEntry{Designed an offline LLM pipeline with a Flink SQL enqueue stage unioning three ranked traffic sources with priority dedup and per-source quotas, emitting 80,000--120,000 candidates daily after 90-day success suppression; added fail-open metrics for throughput, latency, and retries plus stage-tagged errors propagated across RPC into the ODS sink, and defined recovery for 10+ million anomalous records}
+        \resumeEntry{Engineered Flink pipelines that refresh features for 200M+ queries per run and propagate model token identifiers across query and user streams, sourcing from Hive and driven by Kafka change-data-capture (CDC) triggers}
+        \resumeEntry{Designed and shipped an offline LLM pipeline that precomputes outlines for hot queries into a Redis cache, offloading the online endpoint from live generation; raised success rate from roughly 55\% to 98\% by re-platforming generation and tuning retries and timeouts, and built a Flink SQL enqueue stage emitting 120,000 candidates daily with token and latency metrics and stage-tagged RPC errors in Grafana}
         \resumeEntry{Built Go/Thrift multimodal analysis services with concurrent media retrieval, replacing local Python workflows with scalable backend RPCs}
         \resumeEntry{Integrated asynchronous text/image-to-video generation with configurable media inputs, persisted task state, polling, terminal failure handling, and validated 10-second 720p output}
-        \resumeEntry{Built a platform-wide feedback and reporting service with a single feature-agnostic Go/Thrift RPC endpoint backed by region-local MySQL, a scheduled MySQL-to-Hive sync, and a JSON-exploding view powering per-question analytics dashboards}
+        \resumeEntry{Built a platform-wide feedback and reporting service with a single feature-agnostic Go/Thrift RPC endpoint backed by region-local MySQL, a MySQL-to-Hive sync cron job, and a JSON-exploding view powering per-question analytics dashboards}
         \resumeItemListEnd
 
         
